@@ -20,12 +20,10 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     'swagger-compile': {
-      default_options: {
         options: {
-            src: 'test/fixtures/simple-swagger.json',
+            src: 'test/fixtures/*.json',
             target: 'tmp'
         }
-      }
     },
 
     // Unit tests.

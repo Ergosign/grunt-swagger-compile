@@ -5,6 +5,10 @@
         "title": "Test Swagger"
     },
     "paths":{
-
+        "/test":{
+            "get":{
+                "$ref": "sub-directory/referenced.json"
+            }
+        }
     }
 }
