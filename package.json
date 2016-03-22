@@ -1,45 +1,42 @@
 {
-  "name": "grunt-swagger-compile",
-  "description": "Compiles multiple swagger JSON files into a single Swagger YAML file",
-  "version": "0.1.1",
-  "homepage": "https://github.com/Ergosign/grunt-swagger-compile",
-  "author": {
-    "name": "Al Briggs",
-    "email": "al.briggs@ergosign.de",
-    "url": "http://ergosign.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Ergosign/grunt-swagger-compile.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Ergosign/grunt-swagger-compile/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/Ergosign/grunt-swagger-compile/blob/master/LICENSE"
-    }
-  ],
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "files": [
-    "tasks"
-  ],
-  "devDependencies": {
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt": "~0.4.5",
-    "swagger-parser": "3.4.0"
-  },
-  "keywords": [
-    "gruntplugin",
-    "swagger",
-    "compile"
-  ]
+    "name": "grunt-swagger-compile",
+    "description": "Compiles multiple swagger JSON files into a single Swagger YAML file",
+    "version": "0.1.1",
+    "homepage": "https://github.com/Ergosign/grunt-swagger-compile",
+    "author": {
+        "name": "Al Briggs",
+        "email": "al.briggs@ergosign.de",
+        "url": "http://ergosign.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Ergosign/grunt-swagger-compile.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Ergosign/grunt-swagger-compile/issues"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "files": [
+        "tasks"
+    ],
+    "dependencies": {
+        "swagger-parser": "3.4.0"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "^0.9.2",
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-nodeunit": "^0.3.3",
+        "grunt": "~0.4.5"
+    },
+    "keywords": [
+        "gruntplugin",
+        "swagger",
+        "compile"
+    ]
 }
