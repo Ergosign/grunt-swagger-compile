@@ -1,6 +1,6 @@
 /*
  * grunt-swagger-utils
- * https://github.com/Ergosign/grunt-swagger-utils
+ * https://github.com/Ergosign/grunt-swagger-compile
  *
  * Copyright (c) 2016 Al Briggs
  * Licensed under the MIT license.
@@ -12,16 +12,6 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
@@ -29,21 +19,11 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    swagger_utils: {
+    'swagger-compile': {
       default_options: {
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+            src: 'test/fixtures/simple-swagger.json',
+            target: 'tmp'
         }
       }
     },
@@ -65,7 +45,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'swagger_utils', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'swagger-compile', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
